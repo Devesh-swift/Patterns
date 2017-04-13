@@ -62,9 +62,7 @@ extension AlbumViewController {
         currentAlbumIndex = 0
         
         //2
-        
         if Reachability.isConnectedToNetwork() {
-            
             
             allAlbums = LibraryAPI.sharedInstance.getAlbums()
             
@@ -111,7 +109,6 @@ extension AlbumViewController {
             self.createAlertMessage("Internet", message: "Check your internet connection")
             
         }
-        
         
     }
     
