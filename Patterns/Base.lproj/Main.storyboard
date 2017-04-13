@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Album View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Patterns" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AlbumViewController" customModule="Patterns" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,14 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dep-cX-8OO">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items/>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dep-cX-8OO" secondAttribute="trailing" id="DQe-hu-8F8"/>
+                            <constraint firstItem="dep-cX-8OO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z0c-BR-KCy"/>
+                            <constraint firstItem="dep-cX-8OO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gW8-5j-K13"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rcv-ND-uJl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="toolBar" destination="dep-cX-8OO" id="g7Y-6n-V4A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479.5" y="383.5"/>
+            <point key="canvasLocation" x="330.5" y="378.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B6B-MG-0sq">
@@ -42,7 +56,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kra-9V-vc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.5" y="383.5"/>
+            <point key="canvasLocation" x="-128.5" y="378.5"/>
         </scene>
     </scenes>
 </document>
